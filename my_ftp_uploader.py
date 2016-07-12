@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-
 import time
-from pprint import pprint
 
 # needs to return a list of (Name, Value, Bool)
 def generate_ftp_download_dir(trans = None):
