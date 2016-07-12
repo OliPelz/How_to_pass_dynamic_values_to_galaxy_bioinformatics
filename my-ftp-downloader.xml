@@ -1,0 +1,25 @@
+<tool id="my-ftp-downloader" name="Tool to upload ftp stuff to a specific dir" version="0.0.1">
+    <description>download all files from official dkfz ftp server</description>
+        <command><![CDATA[
+                ## bash command to be executed
+                ## comments with double hash
+        /software/galaxy_ftp_uploader/uploader.py "$ftp_dynamic_upload_dir" 
+        ]]> 
+        </command>
+        <stdio>
+                <exit_code range="1:" />
+                <exit_code range=":-1" />
+        </stdio>
+        <inputs>
+          <param name="ftp_dynamic_upload_dir" type="select" label="FTP upload dir" dynamic_options="generate_ftp_download_dir( trans=__trans__ )"/>
+        </inputs>
+        <outputs>
+        </outputs>
+    <help>
+        <![CDATA[
+                This tool does whatever it can.
+        ]]>
+        </help>
+        <options refresh="True"/>
+        <code file="my_ftp_uploader.py" />
+</tool>
